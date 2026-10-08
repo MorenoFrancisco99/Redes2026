@@ -16,7 +16,7 @@ clientSocket.sendto(clave.encode(), (serverName, serverPort))
 #Captura de respuesta
 respuesta, serverAddress = clientSocket.recvfrom(2048)
 # el metodo recvfrom toma como parametro el tamaño del buffer. 2048 es adecuado para practicamente todos los propositos
-# los datos del paquete se colocan en la variable modifiedMessage (mensaje modificado) y la dirección de origen del paquete se almacena en la variable serverAddress. 
+# los datos del paquete se colocan en la variable respuesta (mensaje modificado) y la dirección de origen del paquete se almacena en la variable serverAddress. 
 
 if respuesta.decode() != "Ok":
     #decode convertierte los bytes en cadena

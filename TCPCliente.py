@@ -24,8 +24,8 @@ if respuesta != "Ok":
     print("Acceso denegado")
 else:
     while True:
-        sentence = input("Escriba una frase (salir para terminar): ")
-        if sentence == "salir":
+        sentence = input("Escriba una frase: ")
+        if sentence == "0":
             break
         clientSocket.send(sentence.encode())
         modifiedSentence = clientSocket.recv(1024)
